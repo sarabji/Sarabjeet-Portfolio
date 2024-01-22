@@ -130,7 +130,7 @@ function slideScroll() {
     }
   });
   timline.to(slider, {
-    x: "-105  %",
+    x: "-105%",
   });
 } 
 slideScroll();
