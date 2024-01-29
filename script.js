@@ -1,3 +1,17 @@
+var loader = document.querySelector("#intro");
+var fronth6 = document.querySelector("#copyrightfront>h6");
+var loaderhead = document.querySelector("#animatehead");
+gsap.from(loader, {
+  backgroundColor: "#181818",
+  duration: 2,
+});
+gsap.from(fronth6, {
+  y: "40px",
+  duration: 1,
+  ease: "expo-in-out",
+})
+
+
 function smoothAndScroll() {
     gsap.registerPlugin(ScrollTrigger);
 
@@ -61,17 +75,24 @@ let tl = gsap.timeline({
   }
 });
 tl.to("#typo1", {
-  x: 2100,
+  top: "-100%",
+  rotation: 60,
+  duration: .7,
 }, ('onetwo'));
 tl.to("#typo2", {
-  x: -2100,
+  top: "-150%",
+  duration: 1.2,
 }, ('onetwo'));
 tl.to("#typo3", {
-  x: 2100,
-}, ('threefour'));
+  top: "-100%",
+  duration: .5,
+  rotation: 60,
+}, ('onetwo'));
 tl.to("#typo4", {
-  x: -2100,
-}, ('threefour'));
+  top: "-150%",
+  duration: 1.5,
+  rotation: 40,
+}, ('onetwo'));
 }
 imageScrollSlide();
 
@@ -99,23 +120,23 @@ opener.to("#lower", {
 }
 openerFollower();
 
-function slideScroll() {
-  var slider = document.querySelector(".scrollslide");
+// function slideScroll() {
+//   var slider = document.querySelector(".scrollslide");
 
-  let timline = gsap.timeline({
-    scrollTrigger: {
-      trigger: "#page5",
-      scroller: "#main",
-      start: "top top",
-      end: "600%  50%",
-      // markers: true,
-      scrub: 2,
-      pin: true,
-      delay: .1,
-    }
-  });
-  timline.to(slider, {
-    x: "-105%",
-  });
-} 
-slideScroll();
+//   let timline = gsap.timeline({
+//     scrollTrigger: {
+//       trigger: "#page5",
+//       scroller: "#main",
+//       start: "top top",
+//       end: "600%  50%",
+//       // markers: true,
+//       scrub: 2,
+//       pin: true,
+//       delay: .1,
+//     }
+//   });
+//   timline.to(slider, {
+//     x: "-105%",
+//   });
+// } 
+// slideScroll();
