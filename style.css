@@ -33,6 +33,9 @@ body{
     width: 100vw;
     height: 100vh;
     background-color: #dadada;
+    position: absolute;
+    z-index: 10;
+    overflow: hidden;
 }
 #copyrightfront {
     width: 100vw;
@@ -56,7 +59,6 @@ body{
 #frontheadcont {
     width: 100vw;
     height: 28vw;
-    background-color: tomato;
     margin-top: 20vh;
     display: flex;
     align-items: center;
@@ -72,7 +74,13 @@ body{
     color: #1e1e1e;
     line-height: 25vw;
     position: absolute;
-    bottom: -25vw;
+}
+#loader2 {
+    width: 100vw;
+    height: 100vh;
+    background-color: #b92eef;
+    position: absolute;
+    z-index: 9;
 }
 
 #main{
@@ -242,7 +250,7 @@ body{
 }
 #typo1 {
     bottom: -60%;
-    left: 0;
+    left: 45%;
     rotate: -20deg;
 }
 #typo2 {

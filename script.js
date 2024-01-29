@@ -1,15 +1,36 @@
 var loader = document.querySelector("#intro");
 var fronth6 = document.querySelector("#copyrightfront>h6");
 var loaderhead = document.querySelector("#animatehead");
-gsap.from(loader, {
-  backgroundColor: "#181818",
-  duration: 2,
-});
 gsap.from(fronth6, {
   y: "40px",
   duration: 1,
-  ease: "expo-in-out",
+  ease: "elastic",
+  delay: .5,
+});
+let tl = gsap.timeline();
+tl.from(loaderhead, {
+  y: "25vw",
+  duration: .8,
+  stagger: 0,
 })
+tl.to(loaderhead, {
+  x: "-320vw",
+  y: 0,
+  duration: 4,
+  color:"#3a3a3a",
+})
+tl.to(loader, {
+  height: 0,
+  duration: .7,
+  ease: Power1.out,
+  stagger: .2,
+})
+tl.to("#loader2", {
+  height: 0,
+  duration: .7,
+  ease: Power1.out,
+})
+
 
 
 function smoothAndScroll() {
@@ -77,7 +98,7 @@ let tl = gsap.timeline({
 tl.to("#typo1", {
   top: "-100%",
   rotation: 60,
-  duration: .7,
+  duration: 2.2,
 }, ('onetwo'));
 tl.to("#typo2", {
   top: "-150%",
@@ -90,7 +111,7 @@ tl.to("#typo3", {
 }, ('onetwo'));
 tl.to("#typo4", {
   top: "-150%",
-  duration: 1.5,
+  duration: 1.8,
   rotation: 40,
 }, ('onetwo'));
 }
