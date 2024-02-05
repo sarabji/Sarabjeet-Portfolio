@@ -117,47 +117,46 @@ tl.to("#typo4", {
 }
 imageScrollSlide();
 
-function openerFollower () {
+// function openerFollower () {
   
-var opener = gsap.timeline( {
-  scrollTrigger: {
-    trigger: "#page4",
-    scroller: "#main",
-    start: "top top",
-    end: "+=1200 20%",
-    // markers: true,
-    pin: true,
-    scrub: 2,
-    delay: .5,
-  }
-});
-opener.to("#upper", {
-  height: 0,
-}, ("a"));
-opener.to("#lower", {
-  height: 0,
-}, ("a"));
+// var opener = gsap.timeline( {
+//   scrollTrigger: {
+//     trigger: "#page4",
+//     scroller: "#main",
+//     start: "top top",
+//     end: "+=1200 20%",
+//     // markers: true,
+//     pin: true,
+//     scrub: 2,
+//     delay: .5,
+//   }
+// });
+// opener.to("#upper", {
+//   height: 0,
+// }, ("a"));
+// opener.to("#lower", {
+//   height: 0,
+// }, ("a"));
+
+// }
+// openerFollower();
+
+function qualityslider () {
+  let tl = gsap.timeline( {
+    scrollTrigger: {
+      trigger: "#page4",
+      scroller: "#main",
+      start: "top top",
+      end: "170% 30%",
+      // markers: true,
+      pin: true,
+      scrub: 1,
+    }
+    })
+  tl.to("#page4-inner", {
+    x: "-100%",
+  });
 
 }
-openerFollower();
+qualityslider();
 
-// function slideScroll() {
-//   var slider = document.querySelector(".scrollslide");
-
-//   let timline = gsap.timeline({
-//     scrollTrigger: {
-//       trigger: "#page5",
-//       scroller: "#main",
-//       start: "top top",
-//       end: "600%  50%",
-//       // markers: true,
-//       scrub: 2,
-//       pin: true,
-//       delay: .1,
-//     }
-//   });
-//   timline.to(slider, {
-//     x: "-105%",
-//   });
-// } 
-// slideScroll();
