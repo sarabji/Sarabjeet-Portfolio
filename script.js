@@ -160,3 +160,49 @@ function qualityslider () {
 }
 qualityslider();
 
+function textAnimate() {
+  gsap.registerPlugin(ScrollTrigger)
+
+  const splitTypes = document.querySelectorAll ('.reveal-type')
+  splitTypes.forEach((char, i) => {
+    console.log(i);
+    
+    const text = new SplitType(char, {types: 'chars'})
+
+    gsap.from(text.chars, {
+      scrollTrigger: {
+        trigger: char,
+        scroller: "#main",
+        start: 'top 75%',
+        end: 'top 35%',
+        scrub: 1,
+        markers: false,
+      }, 
+      y: "200%",
+      opacity: 0, 
+      stagger: .2,
+    })
+  })
+}
+textAnimate();
+
+function page6Anim () {
+  var scrollPage = document.querySelector("#page6");
+
+let times = gsap.timeline( {
+  scrollTrigger: { trigger: "#page56-parent", scroller: "#main", start: "59% 50%", end: "80% 50%",
+  /*markers: true,*/ pin: true, scrub: true,}
+  });
+times.to(scrollPage, {
+  right: 0,
+  ease:  Power4,
+  borderRadius: 0,
+});
+
+}
+page6Anim();
+
+
+
+
+

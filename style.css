@@ -183,7 +183,7 @@ body{
     text-align: end;
     color: #808080;
     line-height: 3vw;
-    font-size: 3vw;
+    font-size: 2vw;
     text-transform: uppercase;
     font-family: gilroy;
     font-weight: lighter;
@@ -308,6 +308,9 @@ body{
     width: 280px;
     border-radius: 200px;
 }
+#p4cont1 {
+    background-color: transparent;
+}
 #p4cont1 .p4head:nth-child(1) {
     font-size: 7vw;
     color: #3a3a3a;
@@ -339,16 +342,16 @@ span {
     justify-content: end;
 }
 
-#page4-5-parent {
+/* #page4-5-parent {
     position: relative;
-}
+} */
 /* page5 start  */
 #page5 {
     width: 100vw;
     height: 120vh;
     background-color: #3a3a3a;
     position: relative;
-    z-index: 99;
+    z-index: 98;
     /* margin-top: -1000px; */
 }
 #page5subhead {
@@ -357,10 +360,11 @@ span {
     font-weight: 500;
     padding-left: 13vw;
     padding-top: 70px;
-    margin-bottom: -50px;
+    margin-bottom: -30px;
 }
 #page5head {
-    font-family: gilroy;
+    font-family: remixa;
+    mix-blend-mode:difference;
     font-weight: 500;
     font-size: 12vw;
     padding: 0vw 3vw;
@@ -396,4 +400,36 @@ span {
 }
 #buttons:hover .allbutton {
     background-color: #dadada;
+}
+
+/* Page 6 has start  */
+#page56-parent {
+    width: 100vw;
+    min-height: 100vh;
+    position: relative;
+}
+#page6 {
+    width: 100vw;
+    height: 100vh;
+    background-color: #b92eef;
+    position: absolute;
+    bottom: 0;
+    margin-top: -100vh;
+    right: -100%;
+    border-radius: 600px 0px 0px 600px / 1000px 0px 0px 1000px;
+    z-index: 99;
+}
+
+
+
+
+
+
+
+
+/* Page 7 start _________________________________________ */
+#page7 {
+    width: 100vw;
+    height: 10vh;
+    
 }
