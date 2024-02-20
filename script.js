@@ -1,3 +1,7 @@
+
+// location.reload(true);
+
+
 var loader = document.querySelector("#intro");
 var fronth6 = document.querySelector("#copyrightfront>h6");
 var loaderhead = document.querySelector("#animatehead");
@@ -147,14 +151,14 @@ function qualityslider () {
       trigger: "#page4",
       scroller: "#main",
       start: "top top",
-      end: "170% 30%",
+      end: "180% 30%",
       // markers: true,
       pin: true,
       scrub: 1,
     }
     })
   tl.to("#page4-inner", {
-    x: "-100%",
+    x: "-130%",
   });
 
 }
@@ -190,7 +194,7 @@ function page6Anim () {
   var scrollPage = document.querySelector("#page6");
 
 let times = gsap.timeline( {
-  scrollTrigger: { trigger: "#page56-parent", scroller: "#main", start: "59% 50%", end: "80% 50%",
+  scrollTrigger: { trigger: "#page56-parent", scroller: "#main", start: "59% 50%", end: "73% 50%",
   /*markers: true,*/ pin: true, scrub: true,}
   });
 times.to(scrollPage, {
@@ -199,10 +203,58 @@ times.to(scrollPage, {
   borderRadius: 0,
 });
 
+let tl = gsap.timeline( {
+  scrollTrigger: {
+    trigger: "#page6",
+    scroller: "#main",
+    start: "35% 5%",
+    end: "100% 10%",
+    // markers: true,
+    scrub: true,
+  }
+});
+tl.to("#page6", {
+  backgroundColor: "#3a3a3a",
+},"az");
+tl.to("#page6add", {
+  backgroundColor: "#3a3a3a",
+},"az");
+tl.to("#cont6button > .allbutton", {
+  color: "#b92eef",
+},"az");
+
 }
 page6Anim();
 
 
-
-
+function textAnimP6 (){
+  let timlin = gsap.timeline( {
+    scrollTrigger: {
+      trigger: "#page6", 
+      scroller: "#main",
+      start: "20% 10%",
+      end: "50% 10%",
+      // markers: true,
+    }
+  })
+  
+  timlin.from(".p6textanim1", {
+    y: "100px",
+    opacity: 0,
+  });
+  timlin.from(".p6textanim2", {
+    y: "100px",
+    opacity: 0,
+  });
+  timlin.from(".p6textanim3", {
+    x: "-200px",
+    opacity: 0,
+  });
+  timlin.from(".p6textanim4", {
+    y: "100px",
+    opacity: 0,
+  });
+}
+  
+textAnimP6();
 

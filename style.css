@@ -34,7 +34,7 @@ body{
     height: 100vh;
     background-color: #dadada;
     position: absolute;
-    z-index: 10;
+    z-index: 999;
     overflow: hidden;
 }
 #copyrightfront {
@@ -80,7 +80,7 @@ body{
     height: 100vh;
     background-color: #b92eef;
     position: absolute;
-    z-index: 9;
+    z-index: 998;
 }
 
 #main{
@@ -89,7 +89,49 @@ body{
     background-color: black;
     /* position: relative; */
     color: white;
+    text-decoration: none;
+    position: relative;
 }
+/* Navbar start ______________________________________________ */
+nav {
+    width: 100vw;
+    min-height: 60px;
+    /* background-color: #755781; */
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 150px 0px 150px;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+nav .navcont1 .main-logo {
+    font-family: mazius;
+    font-weight: 400;
+    color: #b92eef;
+    font-size: 30px;
+    text-decoration: none;
+    cursor: pointer;
+    z-index: 9999;
+}
+nav .navcont2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+nav .navcont2 a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 25px;
+    border: 1px solid #fff;
+    border-radius: 50px;
+    font-family: gilroy;
+    cursor: pointer;
+    mix-blend-mode:difference;
+}
+
+
 #page1{
     width: 100%;
     min-height: 160vh;
@@ -113,6 +155,7 @@ body{
     /* background-color: rgb(54, 227, 227); */
     position: absolute;
     top: 0;
+    z-index: 99;
 }
 
 #page2 {
@@ -120,6 +163,7 @@ body{
     height: 150vh;
     /* background-color: rgb(57, 57, 161); */
     display: flex;
+    z-index: 9;
 
 }
 #page2-cont1 {
@@ -306,10 +350,22 @@ body{
 }
 .vidcont video {
     width: 280px;
-    border-radius: 200px;
+    border-radius: 300px;
 }
 #p4cont1 {
     background-color: transparent;
+    min-width: 95vw;
+    height: 90vh;
+    margin-left: -200px;
+}
+#p4cont1 .svgcont {
+    width: 100%;
+    height: 190px;
+    /* background-color: blue; */
+    display: flex;
+    align-items: end;
+    justify-content: end;
+    padding-right: 15vw;
 }
 #p4cont1 .p4head:nth-child(1) {
     font-size: 7vw;
@@ -364,7 +420,7 @@ span {
 }
 #page5head {
     font-family: remixa;
-    mix-blend-mode:difference;
+    color: #e5e4e4;
     font-weight: 500;
     font-size: 12vw;
     padding: 0vw 3vw;
@@ -380,6 +436,9 @@ span {
     font-size: 2vw;
     font-weight: 500;
 }
+#page5 .allbutton {
+    margin-left: 60vw;
+}
 .allbutton {
     width:  360px;
     height: 110px;
@@ -388,18 +447,16 @@ span {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-left: 60vw;
     background-color: transparent;
-}
-#buttons {
     font-family: gilroy;
     text-decoration: none;
     text-transform: uppercase;
     font-size: 30px;
     color: #b92eef;
+    transition: all ease .4s;
 }
-#buttons:hover .allbutton {
-    background-color: #dadada;
+.allbutton:hover {
+    background-color: #e5e4e4;
 }
 
 /* Page 6 has start  */
@@ -418,18 +475,273 @@ span {
     right: -100%;
     border-radius: 600px 0px 0px 600px / 1000px 0px 0px 1000px;
     z-index: 99;
+    overflow: hidden;
+}
+#page6 #cont6up {
+    width: 100vw;
+    height: 40vh;
+    /* background-color: red; */
+    overflow: hidden;
+    padding: 0vw 5vw;
+    margin-top: 10vh;
+}
+#page6 #cont6up h2 span {
+    color: #e5e4e4;
+    font-weight: 400;
+}
+#page6 #cont6up h2 {
+    font-family: gilroy;
+    font-size: 110px;
+    color: #3a3a3a;
+    line-height: 110px;
+}
+#page6 #cont6down {
+    width: 100%;
+    display: flex;
+    height: fit-content;
+    /* background-color: blue; */
+}
+#page6 #cont6down #cont6button {
+    width: 50%;
+    height: 50vh;
+    /* background-color: rgb(145, 145, 239); */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    padding: 30px;
+    gap: 40px;
+}
+#page6 #cont6down #cont6button .p6textanim3 {
+    width: 120px;
+    animation: starrotation 2.5s linear infinite;
+}
+@keyframes starrotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+#cont6down #cont6button .allbutton {
+    /* margin: 0; */
+    color: #3a3a3a;
+    width: 400px;
+}
+#cont6down #cont6para {
+    width: 50%;
+    display: flex;
+    align-items: top;
+    padding: 0px 30px;
+}
+#cont6down #cont6para .allpara {
+    font-family: gilroy;
+    font-size: 20px;
+    color: #e5e4e4;
+    font-weight: 400;
+}
+#cont6down #cont6para .allpara span {
+    color: #3a3a3a;
+    font-weight: 400;
+}
+#page6add {
+    width: 100vw;
+    height: 40vh;
+    background-color: #b92eef;
 }
 
-
-
-
-
-
-
-
+/* #ex {
+    width: 100vw;
+    height: 100vh;
+} */
 /* Page 7 start _________________________________________ */
 #page7 {
     width: 100vw;
-    height: 10vh;
-    
+    height: 170vh;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+#page7 .bg-footer {
+    width: 70vw;
+    opacity: .7;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+}
+#page7 #page7up {
+    width: 100%;
+    height: fit-content;
+    padding: 50px;
+    /* background-color: #808080; */
+    display: flex;
+    justify-content: center;
+}
+#page7 #page7up h1 {
+    font-size: 6vw;
+    font-family: gilroy;
+    font-weight: 400;
+    text-align: center;
+    text-transform: uppercase;
+}
+#page7 #page7up span {
+    text-transform: lowercase;
+
+}
+
+#page7 #page7down {
+    width: 100vw;
+    height: 100vh;
+    /* background-color: red; */
+    display: flex;
+
+}
+#page7 #page7down #page7downleft {
+    width: 30vw;
+    height: 100%;
+    /* background-color: green; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    padding: 40px;
+    gap: 60px;
+}
+#page7 #page7down #page7downleft .mail-cont {
+    /* background-color: red; */
+    width: 100%;
+    height: fit-content;
+}
+#page7 #page7down #page7downleft h3 {
+    color: #b92eef;
+    font-family: mazius;
+    font-size: 40px;
+}
+#page7 #page7down #page7downleft .mail-cont a {
+    color: #dadada;
+    font-family: gilroy;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+#page7 #page7down #page7downleft .findus {
+    /* background-color: red; */
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+}
+#page7 #page7down #page7downleft .findus a {
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    gap: 20px;
+    text-decoration: none;
+}
+#page7 #page7down #page7downleft .findus a h5 {
+    font-family: gilroy;
+    color:#dadada;
+    font-size: 19px;
+}
+
+#page7down form {
+    width: 60%;
+    height: 100%;
+    /* background-color: rgb(6, 6, 7); */
+    font-family: gilroy;
+    /* font-size: 19px; */
+}
+#page7down form input , select {
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #3a3a3a;
+    transition: .3s ease-in-out;
+    font-size: 18px;
+    padding-bottom: 10px;
+    color: #b92eef;
+    font-family: gilroy;
+}
+#page7down form select:focus {
+    outline: none;
+    border-bottom: 2px solid #b92eef;
+}
+#page7down form input:focus {
+    outline: none;
+    border-bottom: 2px solid #b92eef;
+    width: 100%;
+    color: #e5e4e4;
+    font-family: gilroy;
+    padding: 10px;
+}
+#page7down form .name-email-cont {
+    display: flex;
+    /* gap: 40px; */
+    justify-content: space-evenly;
+    padding: 40px 0px;
+}
+#page7down form .name-email-cont .label-cont {
+    display: flex;
+    flex-direction: column;
+    /* background-color: red; */
+    width: 300px;
+    padding: 10px 0px;
+    gap: 10px;
+}
+#page7 form #service-choose , #country-choose{
+    padding: 20px 60px 20px 80px;
+}
+#page7 form #service-choose select {
+    margin-top: 10px;
+}
+#page7 form #country-choose select {
+    margin-top: 10px;
+}
+
+#page7 form #messagearea {
+    padding-left: 75px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+#page7 form #messagearea textarea {
+    outline: none;
+    background-color: transparent;
+    color: #e5e4e4;
+    padding: 10px;
+    font-family: gilroy;
+    font-size: 18px;
+}
+#page7 form #messagearea textarea:focus {
+    border: 2px solid #b92eef;
+    color: #e5e4e4;
+}
+#page7 form #submit-cont {
+    width: 100%;
+    height: 180px;
+    /* background-color: blue; */
+    display: flex;
+    align-items: end;
+    justify-content: end;
+    padding: 20px;
+}
+#page7 form .allbutton {
+    /* background-color: red; */
+    cursor: pointer;
+    border: 1px solid #b92eef;
+    color: #b92eef;
+    font-size: 25px;
+    width: 300px;
+}
+#page7 form .allbutton:hover {
+    background-color: #b92eef;
+    color: #e5e4e4;
+}
+#page7 form .allbutton:focus {
+    width: 300px;
 }
